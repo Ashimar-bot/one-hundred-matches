@@ -7,39 +7,61 @@
 #include "types.h"
 int main(void)
 {
+srand(time(0));
 pravila();
 printf("1.Для игры двоем\n2.Для игры против компъютера\n"); 
 scanf("%d",&ch); 
+Motion = 1;  
+Count = InitialCount;
 switch(ch) 
 { 
+case 1:
+do {
+        if (Motion == 1) 
+           {
+            do {
+              printf("\n\nХод первого игрока.На столе %d спичек.\n", Count);
+                printf("Сколько вы хотите взять спичек?\n");
+                scanf("%d", &Num);
+                mi(&Num,&Count,&Correct);  //manual input ручной ввод
+		} while (!Correct);
+            } else {
+            do {
+                 printf("\n\nХод второго игрока.На столе %d спичек.\n", Count);
+                printf("Сколько вы хотите взять спичек?\n");
+                scanf("%d", &Num);
+                mi(&Num,&Count,&Correct);  //manual input ручной ввод
+               } while (!Correct);
+                   }
+        Count -= Num;
+        cm(&Motion);  //check motion проверка хода
+    } while (Count > 0);
+    egpvp(&Motion);  //end game конец игры
+break;
 
 case 2: 
-    srand(time(0));
-    Motion = 1;  
-    Count = InitialCount;
-    do {
-        if (Motion == 1) {
+    
+    
+ do {
+        if (Motion == 1) 
+           {
             do {
                 printf("Ваш ход.На столе %d спичек.\n", Count);
                 printf("Сколько вы хотите взять спичек?\n");
                 scanf("%d", &Num);
                 mi(&Num,&Count,&Correct);  //manual input ручной ввод
 
-            } while (!Correct);
-        } else {
+                } while (!Correct);
+            } else {
             do {
-                ci(&Num,&Count);  //computer input
+                ci(&Num,&Count);  //computer input компьютерный ввод
                 printf("Ход компьютера.Берет %d спичек\n\n\n\n", Num);
-            } while (!Correct);
-        }
+               } while (!Correct);
+                   }
         Count -= Num;
-        cm(&Motion); 
+        cm(&Motion);  //check motion проверка хода
     } while (Count > 0);
-    if (Motion  == 1) {
-        printf("Вы победили!\n");
-    } else {
-        printf("Победил компьютер\n");
-    }
+    eg(&Motion);  //end game конец игры
 break;
 }
     return 0;
