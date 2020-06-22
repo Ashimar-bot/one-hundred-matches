@@ -1,2 +1,2 @@
-rezo: m.c
-	gcc -Wall -o rezo m.c p.c mi.c ci.c cm.c eg.c egpvp.c
+rezo: papka/m.c
+	gcc -Wall -o rezo papka/m.c papka/p.c papka/mi.c papka/ci.c papka/cm.c papka/eg.c papka/egpvp.c
