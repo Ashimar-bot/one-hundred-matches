@@ -1,2 +1,4 @@
-rezo: papka/m.c
-	gcc -Wall -o rezo papka/m.c papka/p.c papka/mi.c papka/ci.c papka/cm.c papka/eg.c papka/egpvp.c
+rezo: src/m.c
+	gcc -Wall -o rezo src/m.c src/p.c src/mi.c src/ci.c src/cm.c src/eg.c src/egpvp.c
+run: ./rezo
+	./rezo 

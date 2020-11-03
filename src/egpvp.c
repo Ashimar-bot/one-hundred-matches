@@ -1,9 +1,11 @@
 #include <stdio.h>
-void egpvp(int *a)
+int egpvp(int *a)
 {
     if (*a == 1) {
         printf("Победил первый игрок!\n");
+return 0;
     } else {
         printf("Победил второй игрок!\n");
+return 1;
     }
 }
