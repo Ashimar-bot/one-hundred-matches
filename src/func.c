@@ -5,12 +5,17 @@
 #include <stdbool.h>
 int ci(int *a, int *b)
 {
-    srand(time(0));
+   srand(time(0));
     *a = rand() % 10 + 1;
-    if (*a > *b) {
+    if(*a > *b) {
         *a = *b;
-return 0;
-    }else{return 1;}
+        } 
+        
+        if(*a<11 && *a<=*b){
+        return 0;}
+        
+        
+      return 1;  
 }
 int cm(int *a)
 {
