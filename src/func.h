@@ -6,7 +6,7 @@
 const int InitialCount = 100;
 int Count, Num, Motion, ch;
 bool Correct;
-int pravila();
+void pravila();
 int mi(int* a, int* b, bool* c);
 int ci(int* a, int* b);
 int cm(int* a);

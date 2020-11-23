@@ -1,4 +1,3 @@
-
 #include "func.h"
 int main(void)
 {
@@ -56,6 +55,5 @@ int main(void)
         } while (Count > 0);
         eg(&Motion); // end game конец игры
         break;
-    }
-    return 0;
+    }   
 }
