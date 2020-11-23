@@ -12,7 +12,7 @@ CTEST(ci, ci_test_1)
     int b = 46;
 
     // When
-    int result = ci(&a,&b);
+    int result = ci(&a, &b);
 
     // Then
     int expected = 0;
@@ -25,7 +25,7 @@ CTEST(ci, ci_test_2)
     int b = 5;
 
     // When
-    int result = ci(&a,&b);
+    int result = ci(&a, &b);
 
     // Then
     int expected = 0;
@@ -129,19 +129,20 @@ CTEST(mi, mi_test_1)
     int b = 20;
     bool c;
     // When
-    int result = mi(&a,&b,&c);
+    int result = mi(&a, &b, &c);
 
     // Then
     int expected = 0;
     ASSERT_EQUAL(expected, result);
-}CTEST(mi, mi_test_2)
+}
+CTEST(mi, mi_test_2)
 {
     // Given
     int a = 12;
     int b = 20;
     bool c;
     // When
-    int result = mi(&a,&b,&c);
+    int result = mi(&a, &b, &c);
 
     // Then
     int expected = 1;
@@ -154,7 +155,7 @@ CTEST(mi, mi_test_3)
     int b = 20;
     bool c;
     // When
-    int result = mi(&a,&b,&c);
+    int result = mi(&a, &b, &c);
 
     // Then
     int expected = 1;

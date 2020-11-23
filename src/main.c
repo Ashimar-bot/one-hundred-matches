@@ -13,23 +13,25 @@ int main(void)
         do {
             if (Motion == 1) {
                 do {
-                    printf("\n\nХод первого игрока.На столе %d спичек.\n", Count);
+                    printf("\n\nХод первого игрока.На столе %d спичек.\n",
+                           Count);
                     printf("Сколько вы хотите взять спичек?\n");
                     scanf("%d", &Num);
-                    mi(&Num, &Count, &Correct); //manual input ручной ввод
+                    mi(&Num, &Count, &Correct); // manual input ручной ввод
                 } while (!Correct);
             } else {
                 do {
-                    printf("\n\nХод второго игрока.На столе %d спичек.\n", Count);
+                    printf("\n\nХод второго игрока.На столе %d спичек.\n",
+                           Count);
                     printf("Сколько вы хотите взять спичек?\n");
                     scanf("%d", &Num);
-                    mi(&Num, &Count, &Correct); //manual input ручной ввод
+                    mi(&Num, &Count, &Correct); // manual input ручной ввод
                 } while (!Correct);
             }
             Count -= Num;
-            cm(&Motion); //check motion проверка хода
+            cm(&Motion); // check motion проверка хода
         } while (Count > 0);
-        egpvp(&Motion); //end game конец игры
+        egpvp(&Motion); // end game конец игры
         break;
 
     case 2:
@@ -40,19 +42,19 @@ int main(void)
                     printf("Ваш ход.На столе %d спичек.\n", Count);
                     printf("Сколько вы хотите взять спичек?\n");
                     scanf("%d", &Num);
-                    mi(&Num, &Count, &Correct); //manual input ручной ввод
+                    mi(&Num, &Count, &Correct); // manual input ручной ввод
 
                 } while (!Correct);
             } else {
                 do {
-                    ci(&Num, &Count); //computer input компьютерный ввод
+                    ci(&Num, &Count); // computer input компьютерный ввод
                     printf("Ход компьютера.Берет %d спичек\n\n\n\n", Num);
                 } while (!Correct);
             }
             Count -= Num;
-            cm(&Motion); //check motion проверка хода
+            cm(&Motion); // check motion проверка хода
         } while (Count > 0);
-        eg(&Motion); //end game конец игры
+        eg(&Motion); // end game конец игры
         break;
     }
     return 0;
