@@ -55,5 +55,5 @@ int main(void)
         } while (Count > 0);
         eg(&Motion); // end game конец игры
         break;
-    }   
+    }
 }

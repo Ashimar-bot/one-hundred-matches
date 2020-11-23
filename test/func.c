@@ -35,7 +35,6 @@ CTEST(cm, cm_test_1)
 {
     // Given
     int a = 1;
-    
 
     // When
     int result = cm(&a);
@@ -48,7 +47,6 @@ CTEST(cm, cm_test_2)
 {
     // Given
     int a = 2;
-    
 
     // When
     int result = cm(&a);
@@ -61,7 +59,6 @@ CTEST(cm, cm_test_3)
 {
     // Given
     int a = -824;
-    
 
     // When
     int result = cm(&a);
@@ -74,7 +71,6 @@ CTEST(eg, eg_test_1)
 {
     // Given
     int a = 1;
-    
 
     // When
     int result = eg(&a);
@@ -87,7 +83,6 @@ CTEST(eg, eg_test_2)
 {
     // Given
     int a = 14;
-    
 
     // When
     int result = eg(&a);
@@ -100,7 +95,6 @@ CTEST(egpvp, egpvp_test_1)
 {
     // Given
     int a = 1;
-    
 
     // When
     int result = egpvp(&a);
@@ -113,7 +107,6 @@ CTEST(egpvp, egpvp_test_2)
 {
     // Given
     int a = -89;
-    
 
     // When
     int result = egpvp(&a);
