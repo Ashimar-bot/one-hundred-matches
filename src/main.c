@@ -1,9 +1,5 @@
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <strings.h>
-#include <time.h>
-#include "types.h"
+
+#include "func.h"
 int main(void)
 {
     srand(time(0));
